@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Vladislav Frost](https://up.htmlacademy.ru/htmlcss/34/user/2071503).
-* Наставник: [Анна Лисененкова] (https://htmlacademy.ru/profile/ankhena).
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
