@@ -22,6 +22,18 @@ body {
     background-color: #F2F2F2;
 }
 
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -33,9 +45,6 @@ body {
 }
 
 /* Шапка сайта  */
-.navigation-list {
-    list-style-type: none;
-}
 
 .navigation-link {
     font-size: 20px;
@@ -102,30 +111,12 @@ body {
     text-align: center;
 }
 
-.advantages-item-image {
-    height: 384px;
-    width: 800px;
-    background-image: url("../images/real-town.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: auto;
+.advantages-item-town::after {
+    content: url("../images/real-town.jpg");
 }
 
-.advantages-item-image-bridge {
-    height: 384px;
-    width: 800px;
-    background-image: url("../images/devil-bridge.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: auto;
-}
-
-.advantages-list {
-    list-style-type: none;
-}
-
-.advantages-item-list {
-    list-style-type: none;
+.advantages-item-bridge::before {
+    content: url("../images/devil-bridge.jpg");
 }
 
 .advantages-list h4 {
@@ -152,23 +143,14 @@ body {
 
 .advantages-title-house::before {
     content: url("../images/icon/icon-house.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: auto;
 }
 
 .advantages-title-food::before {
     content: url("../images/icon/icon-food.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: auto;
 }
 
 .advantages-title-souvenirs::before {
     content: url("../images/icon/icon-souvenirs.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: auto;
 }
 
 /*section Поиск гостиниц */
@@ -208,6 +190,14 @@ body {
     text-align: center;
     vertical-align: top;
 }
+.subscribe-bg-color {
+    background-color: #82B3D3;
+}
+
+.subscribe-bg-none {
+    background-image: none;
+    color: #000000;
+}
 
 .subscribe-title {
     font-size: 30px;
@@ -223,6 +213,8 @@ body {
     border-radius: 10px 0 0 10px;
     width: 600px;
     height: 60px;
+    font-size: inherit;
+    background-color: #F2F2F2;
 }
 
 .subscribe-button {
@@ -240,9 +232,6 @@ body {
 }
 
 /*подвал страницы*/
-.footer-social-list {
-    list-style-type: none;
-}
 
 .button-vk {
     background-image: url("../images/icon/icon-vk.svg");
@@ -317,6 +306,7 @@ body {
     color: #FFFFFF;
     font-size: 16px;
     line-height: 1.2;
+    font-family: "PT Sans";
 }
 
 .filter-form-apply {
@@ -326,6 +316,7 @@ body {
     width: 160px;
     height: 48px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .filter-form-reset {
@@ -349,6 +340,8 @@ body {
     background: url("../images/icon/icon-bottom-tick.svg") right center no-repeat;
     font-size: 18px;
     line-height: 1.2;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
 }
 
 .button-table {
@@ -449,7 +442,6 @@ body {
 .search-form-input {
     border: none;
     background-color: #F2F2F2;
-    font-family: "PT Sans";
     font-size: 18px;
     line-height: 1.2;
 }
@@ -462,4 +454,18 @@ body {
 
 .text-alerts {
     color: #FF5757;
+}
+
+.number-hotels {
+    background: transparent;
+    appearance: none;
+    vertical-align: top;
+    text-align: left;
+    background: url("../images/icon/icon-bottom-tick.svg") right center no-repeat;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 160px;
+    height: 48px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
 }
