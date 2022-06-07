@@ -25,9 +25,6 @@ body {
     color: #333333;
     background-color: #F2F2F2;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
 }
 
 input,
@@ -45,6 +42,9 @@ ul li {
     width: 1200px;
     margin: 0 auto;
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .main-container {
@@ -58,7 +58,7 @@ ul li {
 /* Шапка сайта  */
 .navigation {
     display: flex;
-    width: 1060px;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -130,14 +130,15 @@ ul li {
 
 /*section Преимущества*/
 .advantages-list,
-.advantages-list-container,
-.advantages-item-list {
+.advantages-list-container{
     margin: 0;
     padding: 0;
 }
 
-.advantages-list-container {
+.advantages-item,
+.advantages-list-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .advantages-main-title {
@@ -305,7 +306,7 @@ ul li {
 /*подвал страницы*/
 .page-footer {
     display: flex;
-    width: 1056px;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -363,14 +364,19 @@ ul li {
     padding: 0;
 }
 
-.filter-box {
+.filter-form {
     display: flex;
-    width: 1060px;
+    width: 88%;
     margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.filter-form h2 {
+    width: 100%;
 }
 
 .search-parameters-group {
-    width: 1060px;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -414,7 +420,7 @@ ul li {
 
 .catalog-filter-cost {
     width: 288px;
-    margin-right: 70px;
+    margin-right: 55px;
 }
 
 .bottons-group {
@@ -428,6 +434,8 @@ ul li {
 
 .filter-form-apply,
 .filter-form-reset {
+    padding: 0;
+    margin: 0;
     color: #FFFFFF;
     font-size: 16px;
     line-height: 1.2;
@@ -452,7 +460,7 @@ ul li {
 /*section Каталог*/
 .catalog-title-box {
     display: flex;
-    width: 1057px;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -463,7 +471,7 @@ ul li {
 .result-list {
     margin: 0;
     padding: 0;
-    width: 1056px;
+    width: 88%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -472,7 +480,7 @@ ul li {
 
 .catalog-footer-box {
     display: flex;
-    width: 1056px;
+    width: 88%;
     margin: 0 auto;
 }
 
