@@ -69,8 +69,17 @@ ul li {
     margin: 0 auto;
 }
 
+.header-logo {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
 .navigation-logo {
+    display: block;
     margin-right: 30px;
+    width: 139px;
+    margin-bottom: -5px;
 }
 
 .navigation-link {
@@ -78,46 +87,50 @@ ul li {
     font-weight: 700;
     text-align: left;
     color: #000000;
-    vertical-align: top;
     text-decoration: none;
     display: block;
     padding: 20px 17px;
 }
 
-.navigation-user-search,
-.navigation-user-favorite {
-    display: block;
-    padding: 23px 12px;
+.navigation-user-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    min-width: 18px;
+    min-height: 18px;
+    
 }
 
 .navigation-list {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     width: 450px;
     margin: 0;
     padding: 0;
-    min-width: 18px;
-    min-height: 18px;
 }
 
 .navigation-user {
     max-width: 300px;
     margin-left: auto;
+    justify-content: end;
 }
 
 .navigation-user-search {
-
+    display: block;
+    width: 40px;
+    height: 30px;
     background-image: url("../images/icon/icon-search.svg");
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 18px 18px;
+    margin-right: 4px;
 }
 
 .navigation-user-favorite {
+    display: block;
+    width: 40px;
+    height: 30px;
     background-image: url("../images/icon/icon-favorite.svg");
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 18px 18px;
 }
 
 .navigation-item-button {
@@ -134,16 +147,14 @@ ul li {
     text-align: center;
     margin-top: 14px;
     margin-bottom: 14px;
-    margin-left: 20px;
     padding-top: 9px;
     padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: 20px;
 }
 
 /*index-html*/
 
-/*section Приветствие*/     
+/*section Приветствие*/
 .welcome {
     background-image: url("../images/vector-preview-sedona.svg"),
         url("../images/preview-sedona.jpg");
@@ -200,22 +211,25 @@ ul li {
 }
 
 .advantages-item-town::after {
-    max-width: 800px;
+    display: block;
+    min-width: 66%;
     height: 382px;
     content: "";
     background-image: url("../images/real-town.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: auto;
+
 }
 
 .advantages-item-bridge::before {
-    width: 800px;
+    display: block;
+    min-width: 66%;
+    height: 382px;
     content: "";
     background-image: url("../images/devil-bridge.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: auto;
+
 }
 
 .advantages-list h4 {
@@ -229,7 +243,7 @@ ul li {
 .advantages-item-accent {
     background-color: #82B3D3;
     color: #FFFFFF;
-    width: 400px;
+    width: 33%;
 }
 
 .advantages-item-accent h4 {
@@ -357,15 +371,16 @@ ul li {
     display: flex;
     width: 88%;
     margin: 0 auto;
+    min-height: 120px;
 }
 
 .footer-social-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 49px;
-    margin-bottom: 54px;
+    margin-top: 40px;
     min-width: 130px;
     margin-right: 38px;
+    padding-left: 0;
 }
 
 .footer-contact {
@@ -373,45 +388,51 @@ ul li {
     margin-right: 53px;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 30px;
 }
 
 .logo-academy {
     width: 115px;
     margin-top: 43px;
-    margin-bottom: 43px;
 }
 
 .button-vk {
     display: block;
-    width: 24px;
-    height: 14px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/icon/icon-vk.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: auto;
-    margin-right: 26px;
+
 }
 
 .button-tg {
     display: block;
-    width: 18px;
-    height: 17px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/icon/icon-telegram.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: auto;
-    margin-right: 26px;
+
 }
 
 .button-yt {
     display: block;
-    width: 22px;
-    height: 17px;
+    width: 40px;
+    height: 40px;
     background-image: url("../images/icon/icon-you-tube.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: auto;
+}
+
+.footer-social-item {
+    width: 40px;
+    height: 40px;
 }
 
 .page-footer-tel {
@@ -432,6 +453,7 @@ ul li {
 }
 
 .breadcrumbs {
+    display: flex;
     margin-bottom: 40px;
 }
 
@@ -440,18 +462,17 @@ ul li {
     flex-wrap: wrap;
 }
 
-.filter-form h2 {
-    width: 100%;
-}
-
 .search-parameters-group {
     width: 88%;
     padding: 35px 70px 70px 70px;
 }
 
 .breadcrumbs-link-icon {
+    display: block;
+    width: 20px;
+    height: 25px;
     background-image: url("../images/icon/icon-home.svg");
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -616,7 +637,7 @@ ul li {
     margin-right: auto;
 }
 
-.catalog-menu-box{
+.catalog-menu-box {
     display: flex;
 }
 
@@ -625,7 +646,7 @@ ul li {
     width: 48px;
     height: 48px;
     background-image: url("../images/icon/icon-table.svg");
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
     border: 2px solid #E5E5E5;
@@ -638,7 +659,7 @@ ul li {
     width: 48px;
     height: 48px;
     background-image: url("../images/icon/icon-slideshow.svg");
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
     border: 2px solid #E5E5E5;
@@ -651,7 +672,7 @@ ul li {
     width: 48px;
     height: 48px;
     background-image: url("../images/icon/icon-list.svg");
-    background-position: 0 0;
+    background-position: center ;
     background-repeat: no-repeat;
     background-size: auto;
     border: 2px solid #E5E5E5;
@@ -687,7 +708,7 @@ ul li {
 }
 
 .result-link-active {
-    background-color: #7DB54F;  
+    background-color: #7DB54F;
 }
 
 .result-list p {
@@ -701,7 +722,7 @@ ul li {
     color: #FFFFFF;
 }
 
-.number-hotels{
+.number-hotels {
     border: 2px solid #E5E5E5;
 }
 
