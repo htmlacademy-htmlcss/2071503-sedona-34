@@ -56,10 +56,10 @@
                             <a class="breadcrumbs-link">Гостиницы</a>
                         </li>
                     </ul>
-                </div>
-                <section class="filter">
-                    <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
-                        <h2 class="visually-hidden">Выбор жилья</h2>
+
+                    <section class="filter">
+                        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+                            <h2 class="visually-hidden">Выбор жилья</h2>
                             <fieldset class="catalog-filter-group">
                                 <legend class="catalog-filter-title catalog-filter-infrastructure">Инфраструктура:
                                 </legend>
@@ -97,7 +97,8 @@
                                 <button class="filter-form-apply" type="button">Применить</button>
                                 <button class="filter-form-reset" type="reset">Сбросить</button>
                             </div>
-                    </form>
+                        </form>
+                </div>
                 </section>
             </div>
             <section class="catalog">
@@ -109,70 +110,72 @@
                         <option value="popular">Сначала популярные</option>
                         <option value="expensive">Сначала дорогие</option>
                     </select>
-                    <a class="button-table button-selected" href="#">
-                        <span class="visually-hidden">Таблица</span>
-                    </a>
-                    <a class="button-slideshow" href="#">
-                        <span class="visually-hidden">Слайд-шоу</span>
-                    </a>
-                    <a class="button-list" href="#">
-                        <span class="visually-hidden">Список</span>
-                    </a>
+                    <div class="catalog-menu-box">
+                        <a class="button-table button-selected" href="#">
+                            <span class="visually-hidden">Таблица</span>
+                        </a>
+                        <a class="button-slideshow" href="#">
+                            <span class="visually-hidden">Слайд-шоу</span>
+                        </a>
+                        <a class="button-list" href="#">
+                            <span class="visually-hidden">Список</span>
+                        </a>
+                    </div>
                 </div>
-                    <ul class="result-list">
-                        <li class="result-card">
-                            <a class="result-card-link" href="#">
-                                <img src="images/hotel-1.jpg" width="300" height="211" alt="Amara Resort & Spa">
-                            </a>
-                            <a class="result-card-link" href="#">
-                                <h3>Amara Resort & Spa</h3>
-                            </a>
-                            <span class="result-card-price">Гостиница</span>
-                            <span class="result-card-price">От 4000 ₽</span>
-                            <a class="result-card-link-detailed" href="#">Подробнее</a>
-                            <a class="result-card-link-favourites" href="#">В избранное</a>
-                            <p>Рейтинг: 8,5</p>
-                        </li>
-                        <li class="result-card">
-                            <a class="result-card-link" href="#">
-                                <img src="images/hotel-2.jpg" width="300" height="211" alt="Villas at Poco Diablo">
-                            </a>
-                            <a class="result-card-link" href="#">
-                                <h3>Villas at Poco Diablo</h3>
-                            </a>
-                            <span class="result-card-price">Гостиница</span>
-                            <span class="result-card-price">От 5000 ₽</span>
-                            <a class="result-card-link-detailed" href="#">Подробнее</a>
-                            <a class="result-card-link-favourites result-link-active" href="#">В избранное</a>
-                            <p>Рейтинг: 9,2</p>
-                        </li>
-                        <li class="result-card">
-                            <a class="result-card-link" href="#">
-                                <img src="images/hotel-3.jpg" width="300" height="211" alt="Desert Quail Inn">
-                            </a>
-                            <a class="result-card-link" href="#">
-                                <h3>Desert Quail Inn</h3>
-                            </a>
-                            <span class="result-card-price">Гостиница</span>
-                            <span class="result-card-price">От 2500 ₽</span>
-                            <a class="result-card-link-detailed" href="#">Подробнее</a>
-                            <a class="result-card-link-favourites" href="#">В избранное</a>
-                            <p>Рейтинг: 6,9</p>
-                        </li>
-                        <li class="result-card">
-                            <a class="result-card-link" href="#">
-                                <img src="images/hotel-4.jpg" width="300" height="211" alt="GreenTree Inn">
-                            </a>
-                            <a class="result-card-link" href="#">
-                                <h3>GreenTree Inn</h3>
-                            </a>
-                            <span class="result-card-price">Гостиница</span>
-                            <span class="result-card-price">От 1500 ₽</span>
-                            <a class="result-card-link-detailed" href="#">Подробнее</a>
-                            <a class="result-card-link-favourites" href="#">В избранное</a>
-                            <p>Рейтинг: 5,0</p>
-                        </li>
-                    </ul>
+                <ul class="result-list">
+                    <li class="result-card">
+                        <a class="result-card-link" href="#">
+                            <img src="images/hotel-1.jpg" width="300" height="211" alt="Amara Resort & Spa">
+                        </a>
+                        <a class="result-card-link" href="#">
+                            <h3>Amara Resort & Spa</h3>
+                        </a>
+                        <span class="result-card-price">Гостиница</span>
+                        <span class="result-card-price">От 4000 ₽</span>
+                        <a class="result-card-link-detailed" href="#">Подробнее</a>
+                        <a class="result-card-link-favourites" href="#">В избранное</a>
+                        <p>Рейтинг: 8,5</p>
+                    </li>
+                    <li class="result-card">
+                        <a class="result-card-link" href="#">
+                            <img src="images/hotel-2.jpg" width="300" height="211" alt="Villas at Poco Diablo">
+                        </a>
+                        <a class="result-card-link" href="#">
+                            <h3>Villas at Poco Diablo</h3>
+                        </a>
+                        <span class="result-card-price">Гостиница</span>
+                        <span class="result-card-price">От 5000 ₽</span>
+                        <a class="result-card-link-detailed" href="#">Подробнее</a>
+                        <a class="result-card-link-favourites result-link-active" href="#">В избранное</a>
+                        <p>Рейтинг: 9,2</p>
+                    </li>
+                    <li class="result-card">
+                        <a class="result-card-link" href="#">
+                            <img src="images/hotel-3.jpg" width="300" height="211" alt="Desert Quail Inn">
+                        </a>
+                        <a class="result-card-link" href="#">
+                            <h3>Desert Quail Inn</h3>
+                        </a>
+                        <span class="result-card-price">Гостиница</span>
+                        <span class="result-card-price">От 2500 ₽</span>
+                        <a class="result-card-link-detailed" href="#">Подробнее</a>
+                        <a class="result-card-link-favourites" href="#">В избранное</a>
+                        <p>Рейтинг: 6,9</p>
+                    </li>
+                    <li class="result-card">
+                        <a class="result-card-link" href="#">
+                            <img src="images/hotel-4.jpg" width="300" height="211" alt="GreenTree Inn">
+                        </a>
+                        <a class="result-card-link" href="#">
+                            <h3>GreenTree Inn</h3>
+                        </a>
+                        <span class="result-card-price">Гостиница</span>
+                        <span class="result-card-price">От 1500 ₽</span>
+                        <a class="result-card-link-detailed" href="#">Подробнее</a>
+                        <a class="result-card-link-favourites" href="#">В избранное</a>
+                        <p>Рейтинг: 5,0</p>
+                    </li>
+                </ul>
                 <div class="catalog-footer-box">
                     <ul class="pagination">
                         <li class="pagination-item">
@@ -205,7 +208,8 @@
             </section>
             <section class="subscribe subscribe-bg-none">
                 <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-                <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+                <p class="subscribe-description">Только полезная информация и никакого спама, <br> честное бойскаутское!
+                </p>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
                     <label class="visually-hidden" for="newsletter-email">Email</label>
                     <input type="email" id="newsletter-email" name="email-user" placeholder="Ваш e-mail">
