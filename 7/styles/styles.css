@@ -204,6 +204,7 @@ ul li {
     width: 800px;
     height: 382px;
 }
+
 .advantages-image {
     display: inline-block;
     vertical-align: top;
@@ -283,8 +284,9 @@ ul li {
     text-align: center;
 }
 
-.advantages-item-house {
-   background-color: rgba(131, 179, 211, 0.12); 
+.advantages-item-house,
+.advantages-item-souvenirs {
+    background-color: #f0f6fa;
 }
 
 .advanteges-number {
@@ -293,7 +295,7 @@ ul li {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .advantages-title-house::before {
@@ -342,7 +344,7 @@ ul li {
 }
 
 .search-hotels-description {
-    font-size: 20px;
+    font-size: 22px;
     vertical-align: top;
     margin: 0;
     margin-bottom: 56px;
@@ -351,6 +353,8 @@ ul li {
 .search-hotels-button {
     display: block;
     width: 574px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin: 0 auto;
     background-color: #756157;
     font-size: 20px;
@@ -617,53 +621,10 @@ ul li {
     margin-right: auto;
 }
 
-.result-list {
-    margin: 0;
-    padding: 0;
-    width: 88%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .catalog-footer-box {
     display: flex;
     width: 88%;
     margin: 0 auto;
-}
-
-.result-card h3 {
-    padding: 0;
-    margin: 0;
-}
-
-.pagination {
-    width: 340px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-right: auto;
-}
-
-.result-description {
-    width: 175px;
-    margin-right: 51px;
-}
-
-.pagination-item {
-    width: 55px;
-    height: 55px;
-    background-color: #82B3D3;
-    text-decoration: none;
-    color: #FFFFFF;
-    margin-right: 8px;
-    border-radius: 4px;
-}
-
-.result-card {
-    width: 300px;
-    padding: 20px;
 }
 
 .search-result {
@@ -732,6 +693,49 @@ ul li {
     border-radius: 4px;
 }
 
+/*Карточки товаров*/
+.result-card h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.result-list {
+    margin: 0;
+    padding: 0;
+    width: 88%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    column-gap: 18px;
+    margin-bottom: 88px;
+}
+
+.result-description {
+    width: 175px;
+    margin-right: 51px;
+}
+
+.result-card {
+    width: 300px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 211px min-content auto min-content auto;
+    grid-template-columns: 140px 20px 140px;
+    row-gap: 16px;
+}
+
+.result-card-link {
+    grid-column: 1/-1;
+}
+
+.result-card-hotel {
+    grid-column: 1/2;
+}
+
+.result-card-price {
+    grid-column: 3/4;
+}
+
 .result-list .result-card-link {
     font-size: 24px;
     line-height: 1.2;
@@ -741,7 +745,8 @@ ul li {
     vertical-align: top;
 }
 
-.result-card-price {
+.result-card-price,
+.result-card-hotel {
     line-height: 1.2;
     vertical-align: top;
 }
@@ -756,18 +761,64 @@ ul li {
     background-color: #756157;
 }
 
+.result-card-link-detailed {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-align: center;
+    border-radius: 4px;
+    grid-column: 1/2;
+}
+
 .result-card-link-favourites {
     background-color: #82B3D3;
+    border-radius: 4px;
+    text-align: center;
+    grid-column: 3/4;
+    padding-top: 9px;
+    padding-bottom: 8px;
 }
 
 .result-link-active {
     background-color: #7DB54F;
 }
 
-.result-list p {
+.result-card-rating {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 1.2;
+    background-color: #F2F2F2;
+    padding: 9px 32px 8px 33px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0;
+    grid-column: 2/4;
+}
+
+.number-hotels {
+    border: 2px solid #E5E5E5;
+}
+
+/*Пагинация*/
+.pagination {
+    width: 390px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #82B3D3;
+    text-decoration: none;
+    margin-right: 8px;
+    margin-top: 8px;
+    border-radius: 4px;
 }
 
 .pagination-link {
@@ -775,10 +826,10 @@ ul li {
     color: #FFFFFF;
 }
 
-.number-hotels {
-    border: 2px solid #E5E5E5;
+.pagination-current {
+    background-color: #F2F2F2;
+    color: #000000;
 }
-
 /*форма поиска гостиниц по дате*/
 .search-form-title {
     font-size: 30px;
