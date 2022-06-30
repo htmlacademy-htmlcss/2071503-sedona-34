@@ -74,9 +74,9 @@ ul li {
     content: "";
     position: absolute;
     right: 17px;
-    bottom: 0;
+    bottom: -1px;
     left: 17px;
-    height: 4px;
+    height: 2px;
     background-color: #756257;
 
 }
@@ -102,15 +102,11 @@ ul li {
     color: #000000;
     text-decoration: none;
     display: block;
-    padding: 20px 17px;
+    padding: 19px 17px;
 }
 
 .navigation-user-item {
-    margin-top: auto;
-    margin-bottom: auto;
-    min-width: 18px;
-    min-height: 18px;
-
+    position: relative;
 }
 
 .navigation-item-button:hover {
@@ -128,34 +124,78 @@ ul li {
 .navigation-list {
     display: flex;
     flex-wrap: wrap;
-    width: 450px;
     margin: 0;
     padding: 0;
 }
 
+.navigation-main {
+    width: 450px;
+}
+
 .navigation-user {
-    max-width: 300px;
+    width: 300px;
     margin-left: auto;
     justify-content: end;
 }
 
 .navigation-user-search {
     display: block;
-    width: 40px;
-    height: 30px;
-    background-image: url("../images/icon/icon-search.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 4px;
+    padding: 20px 12px;
 }
 
-.navigation-user-favorite {
+.user-search-image {
+    fill: #000000;
+    width: 18px;
+    height: 18px;
+}
+
+.user-search-image:hover {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.user-search-image:focus {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.user-search-image:active {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-user-like {
+    position: relative;
     display: block;
-    width: 40px;
-    height: 30px;
-    background-image: url("../images/icon/icon-favorite.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 20px 12px;
+}
+
+.user-like-image {
+    fill: #000000;
+    width: 18px;
+    height: 18px;
+}
+
+.user-like-image:hover {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.user-like-image:focus {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.user-like-image:active {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.counter-like {
+    position: absolute;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 10%;
+    padding: 3px 4px;
+    color: #FFFFFF;
+    background-color: #7DB54F;
+    border-radius: 50%;
+    top: 11px;
+    right: -1px;
 }
 
 .navigation-item-button {
@@ -170,8 +210,8 @@ ul li {
     border-radius: 4px;
     min-width: 160px;
     text-align: center;
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     padding-top: 9px;
     padding-bottom: 8px;
     margin-left: 20px;
@@ -183,7 +223,7 @@ ul li {
 .welcome {
     background-image: url("../images/vector-preview-sedona.svg"),
         url("../images/preview-sedona.jpg");
-    background-position: bottom, 0 0;
+    background-position: 0 calc(100% + 1px), 0 0;
     background-repeat: no-repeat;
     background-size: auto auto, cover;
     color: #FFFFFF;
@@ -914,12 +954,15 @@ ul li {
 .hotel-stars {
     grid-column: 1/2;
     margin: auto 0;
-    width: 89px;
     height: 17px;
     background-image: url("../images/icon/icon-star.svg");
     background-position: left;
     background-repeat: space;
     background-size: auto;
+}
+
+.hotel-stars-four {
+    width: 88px;
 }
 
 .hotel-stars-three {
