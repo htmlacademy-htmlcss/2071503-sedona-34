@@ -549,16 +549,19 @@ ul li {
 
 .logo-academy {
     width: 115px;
-    align-self:center;
+    align-self: center;
 }
 
-.social-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+.button-vk {
+    padding: 8px 8px 7px 8px;
+}
+
+.button-tg {
+    padding: 8px 11px 7px 11px; 
+}
+
+.button-yt {
+    padding: 8px 9px 7px 9px; 
 }
 
 .social-icon {
@@ -584,9 +587,11 @@ ul li {
 }
 
 .footer-social-item {
-    position: relative;
     width: 40px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-footer-tel {
