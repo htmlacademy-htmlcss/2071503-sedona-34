@@ -84,37 +84,93 @@
                             <fieldset class="catalog-filter-group">
                                 <legend class="catalog-filter-title catalog-filter-infrastructure">Инфраструктура:
                                 </legend>
+
                                 <ul class="infrostructure-list">
-                                    <li class="infrostructure-item"><label for="swimming-pool-complex"><input
-                                                type="checkbox" name="swimming-pool" id="swimming-pool-complex"
-                                                checked>Бассейн</label></li>
-                                    <li class="infrostructure-item"><label for="parking-space-complex"><input
-                                                type="checkbox" name="parking-space" id="parking-space-complex"
-                                                checked>Парковка</label></li>
-                                    <li class="infrostructure-item"><label for="complex-Wi-Fi"><input type="checkbox"
-                                                name="Wi-Fi" id="complex-Wi-Fi">Wi-Fi</label></li>
-                                </ul>
-                            </fieldset>
-                            <fieldset class="catalog-filter-group">
-                                <legend class="catalog-filter-title catalog-filter-type">Тип жилья:</legend>
-                                <ul class="housing-list">
-                                    <li class="housing-item"><label for="housing-hotel"><input type="radio"
-                                                name="housing" value="hotel" id="housing-hotel"
-                                                checked>Гостиница</label></li>
-                                    <li class="housing-item"><label for="housing-motel"><input type="radio"
-                                                name="housing" value="motel" id="housing-motel">Мотель</label></li>
-                                    <li class="housing-item"><label for="housing-apartment"><input type="radio"
-                                                name="housing" value="apartment"
-                                                id="housing-apartment">Апартаменты</label>
+                                    <li class="infrostructure-item">
+                                        <label class="control" for="swimming-pool-complex">
+                                            <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" id="swimming-pool-complex"
+                                                checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Бассейн</span>
+                                        </label>
+                                    </li>
+
+                                    <li class="infrostructure-item">
+                                        <label class="control" for="parking-space-complex">
+                                            <input class="visually-hidden control-input" type="checkbox" name="parking-space" id="parking-space-complex"
+                                                checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Парковка</span>
+                                        </label>
+                                    </li>
+
+                                    <li class="infrostructure-item">
+                                        <label class="control" for="complex-Wi-Fi">
+                                            <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi" id="complex-Wi-Fi">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Wi-Fi</span>
+                                        </label>
                                     </li>
                                 </ul>
                             </fieldset>
+
+                            <fieldset class="catalog-filter-group">
+                                <legend class="catalog-filter-title catalog-filter-type">Тип жилья:</legend>
+                                <ul class="housing-list">
+                                    <li class="housing-item">
+                                        <label class="control" for="housing-hotel">
+                                            <input class="visually-hidden control-input" type="radio" name="housing" value="hotel" id="housing-hotel" checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Гостиница</span>
+                                        </label>
+                                    </li>
+
+                                    <li class="housing-item">
+                                        <label class="control" for="housing-motel">
+                                            <input class="visually-hidden control-input" type="radio" name="housing" value="motel" id="housing-motel">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Мотель</span>  
+                                        </label>
+                                    </li>
+
+                                    <li class="housing-item">
+                                        <label class="control" for="housing-apartment">
+                                            <input class="visually-hidden control-input" type="radio" name="housing" value="apartment" id="housing-apartment">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Апартаменты</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+
                             <fieldset class="catalog-filter-group">
                                 <legend class="catalog-filter-title catalog-filter-cost">Стоимость, ₽:</legend>
-                                <label for="price"><input type="range" min="0" max="9000" name="price-housing"
-                                        id="price" step="500"></label>
+                                <div class="range">
+                                    <div class="range-wrapper-inputs">
+                                        <label class="catalog-filter-label catalog-filter-label-min">
+                                            <input class="range-input range-input-min" type="number" value="0"
+                                                name="min-price"><span class="range-input-text">от</span>
+                                        </label>
+                                        <label class="catalog-filter-label catalog-filter-label-max">
+                                            <input class="range-input range-input-max" type="number" value="9000"
+                                                name="max-price"><span class="range-input-text">до</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="range-scale">
+                                        <div class="range-bar" style="left: 0; width: 227px">
+                                            <button class="range-toggle toggle-min">
+                                                <span class="visually-hidden">Изменить минимальную цену.</span>
+                                            </button>
+                                            <button class="range-toggle toggle-max">
+                                                <span class="visually-hidden">Изменить максимальную цену.</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </fieldset>
-                            <div class="bottons-group">
+
+                            <div class="buttons-group">
                                 <button class="filter-form-apply" type="button">Применить</button>
                                 <button class="filter-form-reset" type="reset">Сбросить</button>
                             </div>

@@ -39,6 +39,7 @@ ul li {
 }
 
 .container {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
     background-color: #FFFFFF;
@@ -557,11 +558,11 @@ ul li {
 }
 
 .button-tg {
-    padding: 8px 11px 7px 11px; 
+    padding: 8px 11px 7px 11px;
 }
 
 .button-yt {
-    padding: 8px 9px 7px 9px; 
+    padding: 8px 9px 7px 9px;
 }
 
 .social-icon {
@@ -630,6 +631,21 @@ ul li {
 }
 
 /*hotels.html*/
+.search-parameters-group {
+    padding: 35px 70px 66px 70px;
+}
+
+.search-parameters-box {
+    background-image: url("../images/blurred-background-2\ .jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    background-color: #93b6ce;
+    margin-bottom: 65px;
+}
+
+/*хлебные крошки*/
 .breadcrumbs,
 .infrostructure-list,
 .housing-list,
@@ -643,22 +659,20 @@ ul li {
     margin-bottom: 40px;
 }
 
-.filter-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.search-parameters-group {
-    padding: 35px 70px 66px 70px;
-}
-
 .breadcrumbs-icon-house {
     fill: #FFFFFF;
-    padding: 6px 8px 4px 8px;
+    padding: 6px 8px 9px 8px;
+    position: absolute;
+    left: -7px;
+    top: 1px;
 }
 
 .breadcrumbs-item-hotel {
     margin-left: 2px;
+}
+
+.breadcrumbs-link-icon {
+    position: relative;
 }
 
 .breadcrumbs-link-icon:hover .breadcrumbs-icon-house {
@@ -669,31 +683,170 @@ ul li {
     outline: 3px solid #83B3D3;
 }
 
-.breadcrumbs-tick {
-    padding-right: 10px;
+.breadcrumbs-link {
+    margin-left: 40px;
+}
+
+.breadcrumbs-link-icon::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 8px;
+    top: 8px;
+    left: 25px;
     background-image: url("../images/icon/icon-side-mark.svg");
     background-repeat: no-repeat;
-    background-size: 6px 8px;
-    background-position: center right;
-    margin-right: 10px;
+    background-position: center;
 }
 
-.search-parameters-box {
-    background-image: url("../images/blurred-background-2\ .jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #FFFFFF;
-    background-color: #93b6ce;
-    margin-bottom: 65px;
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+/*Range-слайдер*/
 .catalog-filter-group {
     border: none;
     margin: 0;
     padding: 0;
 }
 
+.range-scale {
+    position: relative;
+    width: 287px;
+    height: 4px;
+    background-color: rgb(100, 107, 109);
+    border-radius: 2px;
+    margin-top: 32px;
+}
+
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+    outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+    top: -8px;
+    left: 0;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    justify-content: start;
+}
+
+.catalog-filter-label {
+    display: flex;
+    width: 143px;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.catalog-filter-label-min {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-radius: 4px 0 0 4px;
+}
+
+.catalog-filter-label-max {
+    border-top: 2px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-radius: 0 4px 4px 0;
+}
+
+.catalog-filter-label-min:hover {
+    border-top: 2px solid rgb(179, 185, 188);
+    border-left: 2px solid rgb(179, 185, 188);
+    border-bottom: 2px solid rgb(179, 185, 188);
+    border-right: 1px solid rgb(179, 185, 188);
+    border-radius: 4px 0 0 4px;
+}
+
+.catalog-filter-label-max:hover {
+    border-top: 2px solid rgb(179, 185, 188);
+    border-left: 1px solid rgb(179, 185, 188);
+    border-bottom: 2px solid rgb(179, 185, 188);
+    border-right: 2px solid rgb(179, 185, 188);
+    border-radius: 0 4px 4px 0;
+}
+
+.catalog-filter-label:focus-within {
+    outline: 2px solid #81B3D2;
+    box-shadow:inset 0 0 0 2px #81B3D2;
+}
+
+.range-input-min:focus {
+    outline: none;
+}
+
+.range-input-max:focus {
+    outline: none;
+}
+
+.catalog-filter-label:focus {
+    background-color: #756257;
+}
+
+.range-input {
+    width: 50px;
+    padding: 14px 10px 11px 19px;
+    margin-right: auto;
+    font: inherit;
+    background-color: transparent;
+    border: none;
+    appearance: textfield;
+    color: #ffffff;
+}
+
+.range-input-text {
+    padding-right: 15px;
+    opacity: 0.3;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+
+/*Радио и чекбоксы*/
+
+/*Чекбокс*/
 .catalog-filter-title {
     font-size: 20px;
     line-height: 1.3;
@@ -721,13 +874,66 @@ ul li {
     margin-bottom: 15px;
 }
 
-.bottons-group {
-    width: 160px;
+.control {
+    position: relative;
+    display: block;
+    padding-left: 39px;
 }
 
-.infrostructure-list,
-.housing-list {
-    vertical-align: top;
+.control-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.control:hover .control-mark {
+    background-color: rgb(196, 209, 224);
+}
+
+.control:focus .control-mark {
+    border: 3px solid #83B3D3;
+}
+
+.control-input:disabled+.control-mark {
+    background-color: rgb(165, 172, 180);
+}
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
+    position: absolute;
+    background-image: url("../images/icon/icon-form-tick.svg");
+    top: 5px;
+    left: 4px;
+    width: 13px;
+    height: 10px;
+    content: "";
+}
+
+/*Радио-кнопки */
+.control-input[type="radio"]+.control-mark {
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked+.control-mark::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #242424;
+    border-radius: 50%;
+    content: "";
+}
+
+/*Кнопки форм*/
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin-top: 55px;
 }
 
 .filter-form-apply,
@@ -1062,9 +1268,6 @@ ul li {
 }
 
 .pagination-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 55px;
     height: 55px;
     background-color: #82B3D3;
@@ -1074,77 +1277,29 @@ ul li {
     border-radius: 4px;
 }
 
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-item:hover,
+.pagination-item:focus {
     background-color: #68A2CA;
 }
 
-.pagination-link:active {
+.pagination-item:active {
     color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-link {
     text-decoration: none;
     color: #FFFFFF;
-    padding: 13px 18px 13px 18px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pagination-current {
     background-color: #F2F2F2;
     color: #000000;
-}
-
-.pagination-current:hover,
-.pagination-current:focus {
-    background-color: #F2F2F2;
-}
-
-.pagination-current:active {
-    color: #000000;
-}
-
-/*форма поиска гостиниц по дате*/
-.search-form-title {
-    font-size: 30px;
-    line-height: 1.2;
-    vertical-align: top;
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.search-form label {
-    font-size: 20px;
-    line-height: 1.3;
-    vertical-align: top;
-    font-weight: 700;
-    color: #000000;
-}
-
-.button-search-hotels {
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 1.2;
-    background-color: #82B3D3;
-    border: none;
-}
-
-.search-form-input {
-    border: none;
-    background-color: #F2F2F2;
-    font-size: 18px;
-    line-height: 1.2;
-}
-
-.search-form-text {
-    font-size: 16px;
-    line-height: 1.3;
-    vertical-align: bottom;
-}
-
-.text-alerts {
-    color: #FF5757;
+    border-radius: 4px;
 }
 
 .number-hotels {
@@ -1163,4 +1318,384 @@ ul li {
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     padding: 12px 19px 16px 19px;
+}
+
+/*Форма поиска гостиниц по дате*/
+
+/*Модальное окно*/
+.modal-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/*
+.modal-container-close {
+    display: none;
+}
+*/
+
+/*Общее описание*/
+.search-form {
+    position: relative;
+    width: 715px;
+    padding: 62px 70px 70px 70px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.search-form-label {
+    font-size: 20px;
+    line-height: 1.3;
+    vertical-align: top;
+    font-weight: 700;
+    color: #000000;
+}
+
+.date-form-text {
+    font-size: 16px;
+    line-height: 1.3;
+    vertical-align: bottom;
+    margin: 0;
+    grid-column: 3/-1;
+    margin-bottom: 11px;
+    margin-top: 8px;
+}
+
+.date-form-text {
+    color: #333333;
+}
+
+.text-alerts {
+    color: #FF5757;
+}
+
+/*Заголовок формы*/
+.search-form-title {
+    font-size: 30px;
+    line-height: 1.2;
+    vertical-align: top;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 63px;
+}
+
+/*Кнопка закрытия формы*/
+.button-close {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    top: 50px;
+    right: 70px;
+    background-color: #F2F2F2;
+    background-image: url("../images/icon/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13px 13px;
+}
+
+.button-close:hover {
+    background-color: #E6E6E6;
+}
+
+.button-close:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.button-close:active {
+    background-color: #E6E6E6;
+    outline: none;
+    opacity: 0.5;
+}
+
+.search-form-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 120px 35px 133px 56px 97px 133px;
+    margin-bottom: 40px;
+}
+
+/*Раскладка грид*/
+.search-form-arrival-date,
+.search-form-departure-date,
+.search-form-adults {
+    grid-column: 1/2;
+    align-self: center;
+}
+
+.counter-adults-wrapper {
+    grid-column: 3/4;
+}
+
+.search-form-children {
+    grid-column: 5/6;
+    align-self: center;
+}
+
+.counter-children-wrapper {
+    grid-column: 6/-1;
+}
+
+/*Формы дат*/
+.form-input {
+    border: none;
+    background-color: #F2F2F2;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.form-input-date {
+    width: 420px;
+    border-radius: 4px;
+    padding: 15px 50px 14px 19px;
+    grid-column: 3/-1;
+    box-sizing: border-box;
+}
+
+.form-input-date:hover {
+    background-color: #E6E6E6;
+}
+
+.form-input-date:focus {
+    outline: 3px solid #83B3D3;
+    background-color: #E6E6E6;
+}
+
+.form-input-date:active {
+    outline: 2px solid #000000;
+    background-color: #ffffff;
+}
+
+
+.button-calendar-arrival-date {
+    position: absolute;
+    display: block;
+    border: none;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    background-image: url("../images/icon/icon-calendar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.button-calendar-departure-date {
+    position: absolute;
+    display: block;
+    border: none;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 100px;
+    background-color: transparent;
+    background-image: url("../images/icon/icon-calendar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+/*Кнопки колличества персон*/
+.counter-wrapper {
+    display: flex;
+}
+
+.button-range {
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.button-range-minus {
+    border-radius: 4px 0 0 4px;
+    background-color: #F2F2F2;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-range-minus::before {
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    right: 18px;
+    left: 19px;
+    background-color: #a9a9a9;
+    content: "";
+}
+
+.button-range-minus:hover::before {
+    background-color: #000000;
+}
+
+.button-range-minus:focus::before {
+    background-color: #000000;
+}
+
+.button-range:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.button-range-plus {
+    border-radius: 0 4px 4px 0;
+    background-color: #F2F2F2;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-range-plus::before,
+.button-range-plus::after {
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    right: 18px;
+    left: 19px;
+    background-color: #a9a9a9;
+    content: "";
+}
+
+.button-range-plus::after {
+    transform: rotate(90deg);
+}
+
+.button-range-plus:hover::before,
+.button-range-plus:hover::after {
+    background-color: #000000;
+}
+
+.button-range-plus:focus::before,
+.button-range-plus:focus::after {
+    background-color: #000000;
+}
+
+.form-input-number {
+    width: 33px;
+    text-align: center;
+}
+
+.form-input-number:hover {
+    background-color: #E6E6E6;
+}
+
+.form-input-number:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px;
+}
+
+.form-input-number::-webkit-outer-spin-button,
+.form-input-number::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/*Кнопка поиска*/
+.button-search-hotels {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 2.3;
+    background-color: #82B3D3;
+    border: none;
+    border-radius: 10px;
+    width: 575px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-search-hotels:hover {
+    background-color: #68A2CA;
+}
+
+.button-search-hotels:focus {
+    background-color: #68A2CA;
+    outline: 3px solid #756257;
+}
+
+
+/*Тултип*/
+.tooltip {
+    position: absolute;
+    right: 152px;
+    bottom: 11px;
+}
+
+.tooltip-toggle {
+    border: none;
+    width: 25px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+    background-color: #83B3D3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip-toggle:hover+.tooltip-text,
+.tooltip-toggle:focus+.tooltip-text {
+    display: block;
+}
+
+.tooltip-toggle:hover,
+.tooltip-toggle:focus {
+    background-color: #68A2CA;
+}
+
+.tooltip-icon {
+    width: 1px;
+    height: 9px;
+}
+
+.tooltip-text {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 15px 18px 18px 22px;
+    border-radius: 10px;
+    display: block;
+    width: 256px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    display: none;
+}
+
+.tooltip-text:after {
+    content: '';
+    background-image: url("../images/icon/icon-corner-tooltip.svg");
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
