@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -163,10 +163,10 @@
 
                                     <div class="range-scale">
                                         <div class="range-bar" style="left: 0; width: 227px">
-                                            <button class="range-toggle toggle-min">
+                                            <button class="range-toggle toggle-min" type="button">
                                                 <span class="visually-hidden">Изменить минимальную цену.</span>
                                             </button>
-                                            <button class="range-toggle toggle-max">
+                                            <button class="range-toggle toggle-max" type="button">
                                                 <span class="visually-hidden">Изменить максимальную цену.</span>
                                             </button>
                                         </div>
@@ -229,7 +229,7 @@
                         <span class="result-card-hotel">Гостиница</span>
                         <span class="result-card-price">От 5000 ₽</span>
                         <a class="result-card-link-detailed" href="#">Подробнее</a>
-                        <a class="result-card-link-favourites result-link-active" href="#">В избранное</a>
+                        <a class="result-card-link-favourites result-link-active" href="#">В избранном</a>
                         <p class="hotel-stars hotel-stars-four"><span class="visually-hidden">4 Звезды</span></p>
                         <p class="result-card-rating">Рейтинг: 9,2</p>
                     </li>
@@ -283,8 +283,8 @@
                             <a class="pagination-link" href="#">10</a>
                         </li>
                     </ul>
-                    <p class="result-description">Гостиниц на странице:</p>
-                    <select class="number-hotels" aria-label="Сортировка">
+                    <label class="result-description" for="number-hotels">Гостиниц на странице:</label>
+                    <select class="number-hotels" id="number-hotels" aria-label="Сортировка">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -345,10 +345,10 @@
 
             <section class="footer-contact">
                 <h3 class="visually-hidden">Контактная информация</h3>
-                <a class="page-footer-tel" href="tel:+7(812)8121212">+7 (812) 812-12-12</a>
+                <a class="page-footer-tel" href="tel:+7(812)8121212"><span class="number">+7 (812) 812-12-12</span></a>
             </section>
-            <div class="logolip">
-                <a class="logo-academy" href="https://htmlacademy.ru/">
+            <div class="logotip">  
+                <a class="logo-academy" href="https://htmlacademy.ru/"><span class="visually-hidden">logo Academy</span>
                     <svg class="academy-image" width="115" height="33" viewBox="0 0 115 33" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path

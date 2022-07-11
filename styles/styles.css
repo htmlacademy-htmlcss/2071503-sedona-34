@@ -502,7 +502,7 @@ ul li {
     font-size: 30px;
     line-height: 1.2;
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
@@ -510,7 +510,7 @@ ul li {
     font-size: 22px;
     line-height: 1.2;
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 43px;
 }
 
 .subscribe-input {
@@ -573,11 +573,11 @@ ul li {
 .page-footer {
     display: grid;
     grid-template-columns: 200px 700px 160px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 70px;
     padding-right: 70px;
-    min-height: 100px; 
+    min-height: 95px; 
 }
 
 .footer-social {
@@ -597,7 +597,7 @@ ul li {
     align-self: center;
 }
 
-.logolip {
+.logotip {
     justify-self: end;
     align-self: center;
     display: flex;
@@ -651,7 +651,7 @@ ul li {
 }
 
 .footer-social-item {
-    margin: 7px;
+    margin-right: 10px;
 }
 
 .page-footer-tel {
@@ -708,19 +708,20 @@ ul li {
     background-size: 100% 100%;
     color: #FFFFFF;
     background-color: #93b6ce;
-    margin-bottom: 65px;
+    margin-bottom: 57px;
 }
 
 .main-title {
     font-size: 60px;
     line-height: 1.3;
+    margin: 0;
+    margin-bottom: 7px;
 }
 
 /*хлебные крошки*/
 .breadcrumbs,
 .infrostructure-list,
-.housing-list,
-.main-title {
+.housing-list {
     margin: 0;
     padding: 0;
 }
@@ -838,7 +839,7 @@ ul li {
 
 .catalog-filter-label {
     display: flex;
-    width: 143px;
+    width: 145px;
     justify-content: start;
     align-items: center;
     box-sizing: border-box;
@@ -895,7 +896,7 @@ ul li {
 
 .range-input {
     width: 50px;
-    padding: 10px 10px 10px 19px;
+    padding: 10px 8px 8px 17px;
     margin-right: auto;
     font: inherit;
     background-color: transparent;
@@ -906,7 +907,7 @@ ul li {
 }
 
 .range-input-text {
-    padding-right: 13px;
+    padding-right: 15px;
     opacity: 0.3;
 }
 
@@ -943,7 +944,7 @@ ul li {
 
 .catalog-filter-cost {
     width: 288px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
 }
 
 .infrostructure-item,
@@ -1076,14 +1077,14 @@ ul li {
 
 /*section Каталог*/
 .catalog {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .catalog-title-box {
     display: flex;
     padding-left: 70px;
     padding-right: 70px;
-    margin-bottom: 52px;
+    margin-bottom: 56px;
 }
 
 .catalog-footer-box {
@@ -1099,7 +1100,7 @@ ul li {
     color: #000000;
     text-transform: uppercase;
     margin: 0;
-    margin-right: 189px;
+    margin-right: 192px;
     margin-top: 10px;
     margin-left: 2px;
 }
@@ -1111,7 +1112,7 @@ ul li {
     vertical-align: top;
     text-align: left;
     background: url("../images/icon/icon-bottom-tick.svg");
-    background-position: 255px center;
+    background-position: 257px center;
     background-repeat: no-repeat;
     background-size: auto;
     font-size: 18px;
@@ -1120,7 +1121,7 @@ ul li {
     border-radius: 4px;
     min-width: 287px;
     margin-right: auto;
-    padding: 14px 20px;
+    padding: 12px 20px;
 }
 
 .select-control:hover {
@@ -1348,11 +1349,11 @@ ul li {
     font-size: 16px;
     line-height: 1.2;
     background-color: #F2F2F2;
-    padding: 9px 32px 8px 33px;
+    padding: 9px 23px 8px 22px;
     display: inline-block;
     border-radius: 4px;
     margin: 0;
-    grid-column: 2/4;
+    grid-column: 3/4;
 }
 
 /*Пагинация*/
@@ -1367,8 +1368,8 @@ ul li {
 }
 
 .pagination-item {
-    min-width: 55px;
-    min-height: 55px;
+    min-width: 60px;
+    min-height: 60px;
     background-color: #82B3D3;
     text-decoration: none;
     margin-right: 8px;
@@ -1389,8 +1390,8 @@ ul li {
 .pagination-link {
     text-decoration: none;
     color: #FFFFFF;
-    min-width: 55px;
-    min-height: 55px;
+    min-width: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1404,9 +1405,10 @@ ul li {
 }
 
 .result-description {
-    padding-top: 3px;
-    min-width: 175px;
+    display: flex;
+    align-items: center;
     margin-right: 51px;
+    margin-top: 10px;
 }
 
 .number-hotels {
@@ -1416,7 +1418,7 @@ ul li {
     appearance: none;
     text-align: left;
     background: url("../images/icon/icon-bottom-tick.svg");
-    background-position: 130px center;
+    background-position: 128px center;
     background-repeat: no-repeat;
     background-size: auto;
     font-size: 18px;
@@ -1425,7 +1427,7 @@ ul li {
     height: 48px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
-    padding: 12px 19px 14px 16px;
+    padding: 13px 20px 13px 20px;
 }
 
 .number-hotels:hover {
