@@ -1,3 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
+.example {
+    display: grid;
+    transition: all .5s;
+    -webkit-user-select: none;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+
 @font-face {
     font-family: "PT Sans";
     font-style: normal;
@@ -93,6 +108,10 @@ ul li {
     margin-right: 30px;
     width: 139px;
     margin-bottom: -5px;
+}
+
+.navigation-logo:focus {
+    z-index: 1;
 }
 
 .navigation-link {
@@ -494,7 +513,7 @@ ul li {
     margin-bottom: 46px;
 }
 
-.subscribe-form>input {
+.subscribe-input {
     border: none;
     border-radius: 10px 0 0 10px;
     width: 600px;
@@ -502,6 +521,27 @@ ul li {
     background-color: #F2F2F2;
     padding-left: 22px;
     box-sizing: border-box;
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.subscribe-input:disabled,
+.subscribe-input:disabled:hover {
+    color: #595959;
+    background-color: #c9bbbb;
+    border-color: #595959;
+}
+
+.subscribe-input:invalid {
+    box-shadow: none;
+}
+
+.subscribe-input:focus:invalid {
+    border-color: #ea5454;
 }
 
 .subscribe-button {
@@ -848,6 +888,7 @@ ul li {
     font: inherit;
     background-color: transparent;
     border: none;
+    -webkit-appearance: textfield;
     appearance: textfield;
     color: #ffffff;
 }
@@ -859,6 +900,7 @@ ul li {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
@@ -917,8 +959,8 @@ ul li {
     background-color: rgb(196, 209, 224);
 }
 
-.control:focus .control-mark {
-    border: 3px solid #83B3D3;
+.control-input:focus+.control-mark {
+    outline: 3px solid #83B3D3;
 }
 
 .control-input:disabled+.control-mark {
@@ -949,6 +991,11 @@ ul li {
     background-color: #242424;
     border-radius: 50%;
     content: "";
+}
+
+.control-input-radio:focus:not(:checked)+.control-mark {
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px;
 }
 
 /*Кнопки форм*/
@@ -1047,6 +1094,7 @@ ul li {
 
 .select-control {
     background: transparent;
+    -webkit-appearance: none;
     appearance: none;
     vertical-align: top;
     text-align: left;
@@ -1065,6 +1113,13 @@ ul li {
 
 .select-control:hover {
     border: 2px solid #83B3D3;
+}
+
+.select-contro:disabled,
+.select-contro:disabled:hover {
+    color: #595959;
+    background-color: #c9bbbb;
+    border-color: #595959;
 }
 
 .catalog-menu-box {
@@ -1114,22 +1169,23 @@ ul li {
     border-radius: 4px;
 }
 
-.button-table:hover,
-.button-slideshow:hover,
-.button-list:hover {
-    border: 2px solid #000000;
-}
-
 .button-table:active,
 .button-slideshow:active,
 .button-list:active {
-    border: 2px solid #000000;
+    outline: 2px solid #000000;
+}
+
+.button-table:hover,
+.button-slideshow:hover,
+.button-list:hover {
+    outline: 2px solid #000000;
 }
 
 .button-table:focus,
 .button-slideshow:focus,
 .button-list:focus {
-    border: 2px solid #68A2CA;
+    outline: 2px solid #68A2CA;
+    outline-offset: -2px;
 }
 
 /*Карточки товаров*/
@@ -1285,7 +1341,7 @@ ul li {
 
 /*Пагинация*/
 .pagination {
-    width: 390px;
+    min-width: 390px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -1295,8 +1351,8 @@ ul li {
 }
 
 .pagination-item {
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     background-color: #82B3D3;
     text-decoration: none;
     margin-right: 8px;
@@ -1317,8 +1373,8 @@ ul li {
 .pagination-link {
     text-decoration: none;
     color: #FFFFFF;
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1333,13 +1389,14 @@ ul li {
 
 .result-description {
     padding-top: 3px;
-    width: 175px;
+    min-width: 175px;
     margin-right: 51px;
 }
 
 .number-hotels {
     margin-top: 12px;
     background: transparent;
+    -webkit-appearance: none;
     appearance: none;
     text-align: left;
     background: url("../images/icon/icon-bottom-tick.svg");
@@ -1353,6 +1410,17 @@ ul li {
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     padding: 12px 19px 16px 16px;
+}
+
+.number-hotels:hover {
+    border: 2px solid #83B3D3;
+}
+
+.number-hotels:disabled,
+.number-hotels:disabled:hover {
+  color: #595959;
+  background-color: #bbc6cb;
+  border-color: #595959;
 }
 
 /*Форма поиска гостиниц по дате*/
@@ -1375,13 +1443,14 @@ ul li {
     display: none;
 }
 
+
 /*Общее описание*/
 .search-form {
     position: relative;
     width: 715px;
     padding: 62px 70px 70px 70px;
     background-color: #FFFFFF;
-    border-radius: 50px;
+    border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
@@ -1432,7 +1501,7 @@ ul li {
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    top: 50px;
+    top: 55px;
     right: 70px;
     background-color: #F2F2F2;
     background-image: url("../images/icon/icon-cross.svg");
@@ -1638,6 +1707,7 @@ ul li {
 
 .form-input-number::-webkit-outer-spin-button,
 .form-input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
@@ -1646,7 +1716,6 @@ ul li {
 .button-search-hotels {
     color: #FFFFFF;
     text-transform: uppercase;
-    font-size: 16px;
     line-height: 2.3;
     background-color: #82B3D3;
     border: none;
@@ -1656,6 +1725,8 @@ ul li {
     padding-bottom: 12px;
     font-weight: 700;
     cursor: pointer;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 .button-search-hotels:hover {
