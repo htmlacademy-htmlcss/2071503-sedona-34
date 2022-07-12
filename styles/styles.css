@@ -42,7 +42,6 @@ body {
     margin: 0;
 }
 
-input,
 button,
 textarea,
 select {
@@ -125,6 +124,14 @@ ul li {
     padding: 19px 17px;
 }
 
+.navigation-link:hover {
+    color: #756257;
+}
+
+.navigation-link:active {
+   color: rgba(175, 184, 106, 0.3);
+}
+
 .navigation-user-item {
     position: relative;
 }
@@ -149,7 +156,7 @@ ul li {
 }
 
 .navigation-main {
-    width: 450px;
+    width: 500px;
 }
 
 .navigation-user {
@@ -229,8 +236,7 @@ ul li {
     text-align: center;
     margin-top: 14px;
     margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 8px;
+    padding: 10px 5px 8px 5px;
 }
 
 /*index-html*/
@@ -242,7 +248,7 @@ ul li {
     background-position: 0 calc(100% + 1px), center bottom;
     background-repeat: no-repeat;
     background-size: auto auto, cover;
-    background-position-x: top;
+    background-color: #93b6ce;
     color: #FFFFFF;
     padding-top: 51px;
     padding-bottom: 80px;
@@ -479,8 +485,9 @@ ul li {
     color: #FFFFFF;
     text-align: center;
     vertical-align: top;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 20px;
+
+
 }
 
 .subscribe-bg-color {
@@ -521,6 +528,7 @@ ul li {
     background-color: #F2F2F2;
     padding-left: 22px;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 .subscribe-input:hover,
@@ -702,7 +710,7 @@ ul li {
 }
 
 .search-parameters-box {
-    background-image: url("../images/blurred-background-2\ .jpg");
+    background-image: url("../images/blurred-background-2.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -729,6 +737,7 @@ ul li {
 .breadcrumbs {
     display: flex;
     margin-bottom: 37px;
+    position: relative;
 }
 
 .breadcrumbs-link {
@@ -760,7 +769,7 @@ ul li {
     margin-left: 40px;
 }
 
-.breadcrumbs-link-icon::after {
+.breadcrumbs-link::before {
     position: absolute;
     content: "";
     display: block;
@@ -776,6 +785,7 @@ ul li {
 .filter-form {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /*Range-слайдер*/
@@ -904,6 +914,7 @@ ul li {
     -webkit-appearance: textfield;
     appearance: textfield;
     color: #ffffff;
+    font-family: inherit;
 }
 
 .range-input-text {
@@ -932,12 +943,12 @@ ul li {
     margin-bottom: 28px;
 }
 
-.catalog-filter-infrastructure {
+.catalog-filter-group-infrastructure {
     width: 160px;
     margin-right: 55px;
 }
 
-.catalog-filter-type {
+.catalog-filter-group-type {
     width: 150px;
     margin-right: 168px;
 }
@@ -1354,6 +1365,7 @@ ul li {
     border-radius: 4px;
     margin: 0;
     grid-column: 3/4;
+    align-self: center;
 }
 
 /*Пагинация*/
