@@ -1,3 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
+.example {
+    display: grid;
+    transition: all .5s;
+    -webkit-user-select: none;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+
 @font-face {
     font-family: "PT Sans";
     font-style: normal;
@@ -93,6 +108,10 @@ ul li {
     margin-right: 30px;
     width: 139px;
     margin-bottom: -5px;
+}
+
+.navigation-logo:focus {
+    z-index: 1;
 }
 
 .navigation-link {
@@ -225,7 +244,7 @@ ul li {
     background-size: auto auto, cover;
     background-position-x: top;
     color: #FFFFFF;
-    padding-top: 15px;
+    padding-top: 51px;
     padding-bottom: 80px;
     margin-bottom: 63px;
 }
@@ -322,7 +341,7 @@ ul li {
     vertical-align: top;
     text-align: center;
     margin: 0;
-    margin-bottom: 122px;
+    margin-bottom: 85px;
 }
 
 .advantages-title,
@@ -483,7 +502,7 @@ ul li {
     font-size: 30px;
     line-height: 1.2;
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
@@ -491,10 +510,10 @@ ul li {
     font-size: 22px;
     line-height: 1.2;
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 43px;
 }
 
-.subscribe-form>input {
+.subscribe-input {
     border: none;
     border-radius: 10px 0 0 10px;
     width: 600px;
@@ -502,6 +521,27 @@ ul li {
     background-color: #F2F2F2;
     padding-left: 22px;
     box-sizing: border-box;
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.subscribe-input:disabled,
+.subscribe-input:disabled:hover {
+    color: #595959;
+    background-color: #c9bbbb;
+    border-color: #595959;
+}
+
+.subscribe-input:invalid {
+    box-shadow: none;
+}
+
+.subscribe-input:focus:invalid {
+    border-color: #ea5454;
 }
 
 .subscribe-button {
@@ -531,31 +571,37 @@ ul li {
 
 /*подвал страницы*/
 .page-footer {
-    display: flex;
-    padding-left: 65px;
+    display: grid;
+    grid-template-columns: 200px 700px 160px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 70px;
     padding-right: 70px;
-    min-height: 120px;
+    min-height: 95px; 
+}
+
+.footer-social {
+    justify-self: start;
+    align-self: center; 
 }
 
 .footer-social-list {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
-    min-width: 130px;
-    margin-right: 38px;
-    padding-left: 0;
 }
 
 .footer-contact {
-    width: 725px;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 45px;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
 }
 
-.logo-academy {
-    width: 115px;
+.logotip {
+    justify-self: end;
     align-self: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .academy-image {
@@ -604,9 +650,8 @@ ul li {
     align-items: center;
 }
 
-.footer-social-item-vk,
-.footer-social-item-tg {
-    margin-right: 7px;
+.footer-social-item {
+    margin-right: 10px;
 }
 
 .page-footer-tel {
@@ -614,6 +659,13 @@ ul li {
     line-height: 40px;
     color: #000000;
     text-decoration: none;
+}
+
+.number {
+    padding: 0;
+    width: 335px;
+    margin: 10px 5px;
+    display: inline-block;
 }
 
 .page-footer-tel:hover {
@@ -656,19 +708,20 @@ ul li {
     background-size: 100% 100%;
     color: #FFFFFF;
     background-color: #93b6ce;
-    margin-bottom: 65px;
+    margin-bottom: 57px;
 }
 
 .main-title {
     font-size: 60px;
     line-height: 1.3;
+    margin: 0;
+    margin-bottom: 7px;
 }
 
 /*хлебные крошки*/
 .breadcrumbs,
 .infrostructure-list,
-.housing-list,
-.main-title {
+.housing-list {
     margin: 0;
     padding: 0;
 }
@@ -786,7 +839,7 @@ ul li {
 
 .catalog-filter-label {
     display: flex;
-    width: 143px;
+    width: 145px;
     justify-content: start;
     align-items: center;
     box-sizing: border-box;
@@ -843,22 +896,24 @@ ul li {
 
 .range-input {
     width: 50px;
-    padding: 10px 10px 10px 19px;
+    padding: 10px 8px 8px 17px;
     margin-right: auto;
     font: inherit;
     background-color: transparent;
     border: none;
+    -webkit-appearance: textfield;
     appearance: textfield;
     color: #ffffff;
 }
 
 .range-input-text {
-    padding-right: 13px;
+    padding-right: 15px;
     opacity: 0.3;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
@@ -889,7 +944,7 @@ ul li {
 
 .catalog-filter-cost {
     width: 288px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
 }
 
 .infrostructure-item,
@@ -917,8 +972,8 @@ ul li {
     background-color: rgb(196, 209, 224);
 }
 
-.control:focus .control-mark {
-    border: 3px solid #83B3D3;
+.control-input:focus+.control-mark {
+    outline: 3px solid #83B3D3;
 }
 
 .control-input:disabled+.control-mark {
@@ -949,6 +1004,11 @@ ul li {
     background-color: #242424;
     border-radius: 50%;
     content: "";
+}
+
+.control-input-radio:focus:not(:checked)+.control-mark {
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px;
 }
 
 /*Кнопки форм*/
@@ -1017,14 +1077,14 @@ ul li {
 
 /*section Каталог*/
 .catalog {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .catalog-title-box {
     display: flex;
     padding-left: 70px;
     padding-right: 70px;
-    margin-bottom: 52px;
+    margin-bottom: 56px;
 }
 
 .catalog-footer-box {
@@ -1040,18 +1100,19 @@ ul li {
     color: #000000;
     text-transform: uppercase;
     margin: 0;
-    margin-right: 189px;
+    margin-right: 192px;
     margin-top: 10px;
     margin-left: 2px;
 }
 
 .select-control {
     background: transparent;
+    -webkit-appearance: none;
     appearance: none;
     vertical-align: top;
     text-align: left;
     background: url("../images/icon/icon-bottom-tick.svg");
-    background-position: 255px center;
+    background-position: 257px center;
     background-repeat: no-repeat;
     background-size: auto;
     font-size: 18px;
@@ -1060,11 +1121,24 @@ ul li {
     border-radius: 4px;
     min-width: 287px;
     margin-right: auto;
-    padding: 14px 20px;
+    padding: 12px 20px;
 }
 
 .select-control:hover {
-    border: 2px solid #83B3D3;
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.select-control:focus{
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.select-contro:disabled,
+.select-contro:disabled:hover {
+    color: #595959;
+    background-color: #c9bbbb;
+    border-color: #595959;
 }
 
 .catalog-menu-box {
@@ -1114,22 +1188,25 @@ ul li {
     border-radius: 4px;
 }
 
-.button-table:hover,
-.button-slideshow:hover,
-.button-list:hover {
-    border: 2px solid #000000;
-}
-
 .button-table:active,
 .button-slideshow:active,
 .button-list:active {
-    border: 2px solid #000000;
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+}
+
+.button-table:hover,
+.button-slideshow:hover,
+.button-list:hover {
+    outline: 2px solid #000000;
+    outline-offset: -2px;
 }
 
 .button-table:focus,
 .button-slideshow:focus,
 .button-list:focus {
-    border: 2px solid #68A2CA;
+    outline: 2px solid #68A2CA;
+    outline-offset: -2px;
 }
 
 /*Карточки товаров*/
@@ -1209,10 +1286,6 @@ ul li {
     vertical-align: top;
 }
 
-.result-card-price {
-    margin-left: -3px;
-}
-
 .result-card-link-detailed,
 .result-card-link-favourites {
     text-decoration: none;
@@ -1276,16 +1349,16 @@ ul li {
     font-size: 16px;
     line-height: 1.2;
     background-color: #F2F2F2;
-    padding: 9px 32px 8px 33px;
+    padding: 9px 23px 8px 22px;
     display: inline-block;
     border-radius: 4px;
     margin: 0;
-    grid-column: 2/4;
+    grid-column: 3/4;
 }
 
 /*Пагинация*/
 .pagination {
-    width: 390px;
+    min-width: 390px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -1295,8 +1368,8 @@ ul li {
 }
 
 .pagination-item {
-    width: 55px;
-    height: 55px;
+    min-width: 60px;
+    min-height: 60px;
     background-color: #82B3D3;
     text-decoration: none;
     margin-right: 8px;
@@ -1317,8 +1390,8 @@ ul li {
 .pagination-link {
     text-decoration: none;
     color: #FFFFFF;
-    width: 55px;
-    height: 55px;
+    min-width: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1332,18 +1405,20 @@ ul li {
 }
 
 .result-description {
-    padding-top: 3px;
-    width: 175px;
+    display: flex;
+    align-items: center;
     margin-right: 51px;
+    margin-top: 10px;
 }
 
 .number-hotels {
     margin-top: 12px;
     background: transparent;
+    -webkit-appearance: none;
     appearance: none;
     text-align: left;
     background: url("../images/icon/icon-bottom-tick.svg");
-    background-position: 130px center;
+    background-position: 128px center;
     background-repeat: no-repeat;
     background-size: auto;
     font-size: 18px;
@@ -1352,7 +1427,24 @@ ul li {
     height: 48px;
     border: 2px solid #E5E5E5;
     border-radius: 4px;
-    padding: 12px 19px 16px 16px;
+    padding: 13px 20px 13px 20px;
+}
+
+.number-hotels:hover {
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.number-hotels:focus{
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+}
+
+.number-hotels:disabled,
+.number-hotels:disabled:hover {
+  color: #595959;
+  background-color: #bbc6cb;
+  border-color: #595959;
 }
 
 /*Форма поиска гостиниц по дате*/
@@ -1375,13 +1467,14 @@ ul li {
     display: none;
 }
 
+
 /*Общее описание*/
 .search-form {
     position: relative;
     width: 715px;
     padding: 62px 70px 70px 70px;
     background-color: #FFFFFF;
-    border-radius: 50px;
+    border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
@@ -1432,7 +1525,7 @@ ul li {
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    top: 50px;
+    top: 55px;
     right: 70px;
     background-color: #F2F2F2;
     background-image: url("../images/icon/icon-cross.svg");
@@ -1638,6 +1731,7 @@ ul li {
 
 .form-input-number::-webkit-outer-spin-button,
 .form-input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
     margin: 0;
 }
@@ -1646,7 +1740,6 @@ ul li {
 .button-search-hotels {
     color: #FFFFFF;
     text-transform: uppercase;
-    font-size: 16px;
     line-height: 2.3;
     background-color: #82B3D3;
     border: none;
@@ -1656,6 +1749,8 @@ ul li {
     padding-bottom: 12px;
     font-weight: 700;
     cursor: pointer;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 .button-search-hotels:hover {
